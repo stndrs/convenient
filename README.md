@@ -9,7 +9,7 @@ To create a new JSON Object:
 json = {
     "name": "Steve",
     "skills": ["sitting", "sleeping", "eating"]
-}
+}.to_json
 
 obj = Convenient::DataObject.new(json)
 => #<Convenient::DataObject:0x2afa9d3135a4> JSON: {
@@ -24,6 +24,9 @@ obj = Convenient::DataObject.new(json)
 obj.name
 => "Steve"
 
+obj[:name]
+=> "Steve"
+
 obj.skills
 => ["sitting", "sleeping", "eating"]
 
@@ -31,7 +34,7 @@ obj.caffeine
 => nil
 
 ```
-A new DataOBject can be initialized with a JSON string or a Hash
+A new DataObject can be initialized with a JSON string or a Hash
 
 
 ## License
