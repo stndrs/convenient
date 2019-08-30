@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/stndrs/convenient/badge.svg?branch=master)](https://coveralls.io/github/stndrs/convenient?branch=master)
+
 # Convenient
 
 This allows JSON objects to be accessed more conveniently using method names. The values of the hash contained within the object can also be accessed using `[]` like normal hashes can. It is very much based on how the [stripe-ruby](https://github.com/stripe/stripe-ruby) gem handles JSON data. Due to how the object is initialized, regular hashes can be passed in as well.
