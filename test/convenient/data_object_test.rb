@@ -15,6 +15,12 @@ module Convenient
       @obj = DataObject.new(@json.to_json)
     end
 
+    def test_it_reponds_like_a_hash
+      Hash.methods.each do |method|
+        @obj.respond_to?(method)
+      end
+    end
+
     def test_it_raises_an_error
       assert_raises ArgumentError do
         DataObject.new

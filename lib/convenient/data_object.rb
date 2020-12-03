@@ -49,16 +49,20 @@ module Convenient
     #
     # @param [Symbol] name
     def method_missing(method)
-      return nil unless respond_to?(method)
+      raise NoMethodError, "undefined method `#{method}` for #{self.name}:Class" unless respond_to?(method)
 
       value = data[method]
-      return handle_value(value) unless value.nil?
+      if value.nil?
+        return data.public_send(method)
+      else
+        return handle_value(value)
+      end
 
       super
     end
 
     def respond_to_missing?(symbol, include_private = false)
-      data&.key?(symbol) || super
+      data&.key?(symbol) || data&.respond_to?(symbol) || super
     end
 
     private
