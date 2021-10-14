@@ -15,6 +15,13 @@ module Convenient
       @obj = DataObject.new(@json.to_json)
     end
 
+    def test_it_returns_nil_if_value_is_nil
+      @json[:null_key] = nil
+      obj = DataObject.new(@json)
+
+      assert_nil obj.null_key
+    end
+
     def test_it_reponds_like_a_hash
       Hash.methods.each do |method|
         @obj.respond_to?(method)

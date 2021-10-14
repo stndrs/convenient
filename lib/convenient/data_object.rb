@@ -49,9 +49,9 @@ module Convenient
     def method_missing(method)
       raise NoMethodError, "undefined method `#{method}` for #{self.class.name}:Class" unless respond_to?(method)
 
-      value = @data[method]
-      return @data.public_send(method) if value.nil?
+      return @data.public_send(method) unless @data.keys.include?(method)
 
+      value = @data[method]
       handle_value(value)
     end
 
