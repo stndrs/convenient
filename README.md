@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/stndrs/convenient/badge.svg?branch=master)](https://coveralls.io/github/stndrs/convenient?branch=master) [![Build Status](https://travis-ci.org/stndrs/convenient.svg?branch=master)](https://travis-ci.org/stndrs/convenient)
+[![Coverage Status](https://coveralls.io/repos/github/stndrs/convenient/badge.svg?branch=master)](https://coveralls.io/github/stndrs/convenient?branch=master) [![Build Status](https://app.travis-ci.com/stndrs/convenient.svg?branch=master)](https://travis-ci.org/stndrs/convenient)
 
 # Convenient
 
