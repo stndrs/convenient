@@ -13,7 +13,8 @@ module Convenient
     # @param [String | Hash] data
     # @param [Convenient::DataObject] parent
     def initialize(data)
-      @data = data.is_a?(Hash) ? data : JSON.parse(data, symbolize_names: true)
+      data = data.is_a?(Hash) ? data.to_json : data
+      @data = JSON.parse(data, symbolize_names: true)
     end
 
     # Allow parsed JSON to be accessed normally
