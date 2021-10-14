@@ -31,15 +31,8 @@ module Convenient
       refute_nil @obj
     end
 
-    def test_child_has_parent
-      child = @obj.nested
-
-      refute_nil child.parent
-      assert_equal child.parent, @obj
-    end
-
     def test_it_responds_to_keys
-      @json.keys.each do |key|
+      @json.each_key do |key|
         assert @obj.respond_to?(key)
       end
     end
@@ -67,13 +60,13 @@ module Convenient
     end
 
     def test_it_prints
-      @json.keys.each do |key|
+      @json.each_key do |key|
         assert @obj.to_s.include?(key.to_s)
       end
     end
 
     def test_it_is_inspectable
-      @json.keys.each do |key|
+      @json.each_key do |key|
         assert @obj.inspect.include?(key.to_s)
       end
 

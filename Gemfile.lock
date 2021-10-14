@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    convenient (0.1.1)
+    convenient (0.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -44,4 +44,4 @@ DEPENDENCIES
   simplecov (~> 0.16)
 
 BUNDLED WITH
-   2.1.4
+   2.2.28
